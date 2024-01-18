@@ -146,7 +146,11 @@ jobs:
 ```
 
 > **Note**
-> You must use the `cache` or `restore` action in your workflow before you need to use the files that might be restored from the cache. If the provided `key` matches an existing cache, a new cache is not created and if the provided `key` doesn't match an existing cache, a new cache is automatically created provided the job completes successfully.
+> You must use the `cache` or `restore` action in your workflow before you need to use the files that might be restored from the cache.
+>
+> If using the `cache` action, `save-always` and the provided `key` ...
+> * _matches_ an existing cache, a new cache is not created.
+> * _doesn't match_ an existing cache, a new cache is automatically created provided the job completes successfully.
 
 ## Caching Strategies
 
